@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { cn } from "@heroui/react";
 
 interface SectionContainerProps {
   id?: string;
@@ -17,9 +18,12 @@ export default function SectionContainer({
   return (
     <div
       id={id}
-      className={`min-h-screen w-full py-20 px-4 md:px-8 flex flex-col justify-center ${className}`}
+      className={cn(
+        "min-h-screen w-full py-20 px-4 md:px-8 flex flex-col justify-center",
+        className,
+      )}
     >
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="mx-auto w-full">
         {title && (
           <motion.h2
             className="text-3xl md:text-4xl font-bold mb-12 text-center"

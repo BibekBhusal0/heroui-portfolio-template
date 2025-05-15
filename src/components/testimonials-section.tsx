@@ -1,17 +1,17 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { Card, CardBody, Avatar } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { Testimonial } from "../types";
 import SectionContainer from "./section-container";
+import Marquee from "./ui/marque";
 
 interface TestimonialsSectionProps {
   data: Testimonial[];
 }
 
-export default function TestimonialsSection({ data }: TestimonialsSectionProps) {
-  const [isHovered, setIsHovered] = React.useState(false);
-  
+export default function TestimonialsSection({
+  data,
+}: TestimonialsSectionProps) {
   // Split testimonials into rows if there are more than 3
   const rows = React.useMemo(() => {
     if (data.length <= 3) {
@@ -23,38 +23,20 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
   }, [data]);
 
   return (
-    <SectionContainer title="Testimonials">
-      <div 
-        className="flex flex-col gap-8"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
+    <SectionContainer className="px-0 md:px-0" title="Testimonials">
+      <div className="flex flex-col gap-8 overflow-x-hidden py-4">
         {rows.map((row, rowIndex) => (
-          <motion.div
+          <Marquee
             key={rowIndex}
-            className="flex overflow-hidden gap-6"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            className="[--duration:40s]"
+            pauseOnHover
+            applyMask={false}
+            reverse={rowIndex % 2 === 0}
           >
-            <motion.div
-              className="flex gap-6"
-              animate={{
-                x: isHovered ? 0 : `-${row.length * 100}px`,
-              }}
-              transition={{
-                x: {
-                  duration: 20,
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  ease: "linear",
-                },
-              }}
-            >
+            <div className="flex gap-6">
               {/* Double the testimonials to create an infinite loop effect */}
               {[...row, ...row].map((testimonial, index) => (
-                <Card 
+                <Card
                   key={`${testimonial.name}-${index}`}
                   className="min-w-[300px] md:min-w-[350px] max-w-[350px] flex-shrink-0"
                 >
@@ -63,9 +45,9 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
                       <div className="text-primary">
                         <Icon icon="lucide:quote" width={24} height={24} />
                       </div>
-                      
+
                       <p className="text-foreground-700">{testimonial.text}</p>
-                      
+
                       <div className="flex items-center gap-3 mt-2">
                         <Avatar
                           src={testimonial.image}
@@ -75,7 +57,9 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
                         <div>
                           <h4 className="font-medium">{testimonial.name}</h4>
                           {testimonial.title && (
-                            <p className="text-sm text-foreground-500">{testimonial.title}</p>
+                            <p className="text-sm text-foreground-500">
+                              {testimonial.title}
+                            </p>
                           )}
                         </div>
                       </div>
@@ -83,8 +67,8 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
                   </CardBody>
                 </Card>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </Marquee>
         ))}
       </div>
     </SectionContainer>
