@@ -14,6 +14,7 @@ export default function ContactSection({ data }: ContactSectionProps) {
   const [formState, setFormState] = React.useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
@@ -35,7 +36,7 @@ export default function ContactSection({ data }: ContactSectionProps) {
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
-      setFormState({ name: "", email: "", message: "" });
+      setFormState({ name: "", email: "", subject: "", message: "" });
 
       addToast({
         title: "Message sent!",
@@ -173,25 +174,40 @@ export default function ContactSection({ data }: ContactSectionProps) {
               <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <Input
-                  label="Name"
-                  name="name"
-                  value={formState.name}
-                  onChange={handleChange}
-                  placeholder="Your name"
-                  isRequired
-                  isDisabled={isSubmitting || isSubmitted}
-                />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Input
+                    label="Name"
+                    name="name"
+                    value={formState.name}
+                    onChange={handleChange}
+                    placeholder="Your name"
+                    isRequired
+                    isDisabled={isSubmitting || isSubmitted}
+                    startContent={<Icon icon="lucide:user" width={14} />}
+                  />
+
+                  <Input
+                    label="Email"
+                    name="email"
+                    type="email"
+                    value={formState.email}
+                    onChange={handleChange}
+                    placeholder="your.email@example.com"
+                    isRequired
+                    isDisabled={isSubmitting || isSubmitted}
+                    startContent={<Icon icon="lucide:mail" width={14} />}
+                  />
+                </div>
 
                 <Input
-                  label="Email"
-                  name="email"
-                  type="email"
-                  value={formState.email}
+                  label="Subject"
+                  name="subject"
+                  value={formState.subject}
                   onChange={handleChange}
-                  placeholder="your.email@example.com"
+                  placeholder="Subject"
                   isRequired
                   isDisabled={isSubmitting || isSubmitted}
+                  startContent={<Icon icon="lucide:book" width={14} />}
                 />
 
                 <Textarea
