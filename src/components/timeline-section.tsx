@@ -27,9 +27,6 @@ export default function TimelineSection({ data }: TimelineSectionProps) {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            {/* Timeline dot */}
-            <div className="absolute left-4 md:left-0 md:right-0 top-6 w-4 h-4 rounded-full bg-primary z-10 md:mx-auto"></div>
-
             <Card className="ml-10 md:ml-0 md:mr-0">
               <CardBody className="p-6">
                 <div className="flex flex-col gap-1">
