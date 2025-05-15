@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Card, CardBody, Image } from "@heroui/react";
+import { Card, CardBody } from "@heroui/react";
 import { SkillCategory } from "../types";
 import SectionContainer from "./section-container";
 
@@ -33,7 +33,7 @@ export default function SkillsSection({ data }: SkillsSectionProps) {
                       transition={{ duration: 0.2 }}
                     >
                       <div className="w-12 h-12 flex items-center justify-center">
-                        <Image
+                        <img
                           src={skill.image}
                           alt={skill.name}
                           className="max-w-full max-h-full object-contain"

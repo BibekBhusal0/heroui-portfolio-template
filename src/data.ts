@@ -9,10 +9,11 @@ import {
 } from "./types";
 
 export const heroSection: HeroSection = {
-  name: "John Placeholder",
+  name: "Mr. Placeholder",
   tagline: "Creating digital experiences that inspire.",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut pulvinar lorem.",
-  image: "https://img.heroui.chat/image/avatar?w=300&h=300&u=john123",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ut pulvinar lorem.",
+  image: "https://img.heroui.chat/image/avatar?w=300&h=300&u=john1",
   cta: [
     { label: "View Projects", link: "#projects" },
     { label: "Get in Touch", link: "#contact" },
@@ -20,7 +21,7 @@ export const heroSection: HeroSection = {
 };
 
 export const aboutSectation: AboutSectation = {
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 };
 
 export const projects: Project[] = [
@@ -36,7 +37,8 @@ export const projects: Project[] = [
   },
   {
     title: "Dashboard X",
-    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+    description:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
     image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=project2",
     tags: ["Vue", "D3", "Admin"],
     links: {
@@ -46,9 +48,31 @@ export const projects: Project[] = [
   },
   {
     title: "E-commerce UI Kit",
-    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
+    description:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
     image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=project3",
     tags: ["Next.js", "Shop", "Stripe"],
+    links: {
+      demo: "#",
+      github: "#",
+    },
+  },
+  {
+    title: "Daily planner",
+    description:
+      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
+    image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=project4",
+    tags: ["HeroUI", "Notion", "Stripe"],
+    links: {
+      demo: "#",
+      github: "#",
+    },
+  },
+  {
+    title: "Dashboard y",
+    description: "lorem ipsum ut elit dolor lorem amet sit dolore sit et",
+    image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=project5",
+    tags: ["HeroUI", "Stripe"],
     links: {
       demo: "#",
       github: "#",
@@ -96,7 +120,8 @@ export const timeline: TimelineItem[] = [
     location: "Remote",
     startDate: "Jan 2023",
     endDate: "Present",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut pulvinar nunc.",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut pulvinar nunc.",
   },
   {
     title: "UI/UX Designer",
@@ -104,7 +129,8 @@ export const timeline: TimelineItem[] = [
     location: "New York, NY",
     startDate: "Aug 2021",
     endDate: "Dec 2022",
-    description: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.",
+    description:
+      "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.",
   },
   {
     title: "Bachelor of Design",
@@ -112,7 +138,8 @@ export const timeline: TimelineItem[] = [
     location: "Online",
     startDate: "2018",
     endDate: "2021",
-    description: "Aliquam erat volutpat. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
+    description:
+      "Aliquam erat volutpat. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
   },
 ];
 
@@ -120,29 +147,76 @@ export const skills: SkillCategory[] = [
   {
     category: "Languages & Frameworks",
     skills: [
-      { name: "JavaScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-      { name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-      { name: "React", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-      { name: "Next.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-      { name: "Vue", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+      {
+        name: "JavaScript",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "TypeScript",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "React",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      },
+      {
+        name: "Next.js",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        name: "Vue",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      },
     ],
   },
   {
     category: "Design & Tools",
     skills: [
-      { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
-      { name: "Sketch", image: "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg" },
-      { name: "Adobe XD", image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg" },
-      { name: "Framer", image: "https://assets-global.website-files.com/5e0a5c6d4e2b0a1cd6a2a7b4/5ea7cb70ad72640c7fcb87f5_framer%20logo.svg" },
+      {
+        name: "Figma",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      },
+      {
+        name: "Sketch",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg",
+      },
+      {
+        name: "Adobe XD",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
+      },
     ],
   },
   {
     category: "Other",
     skills: [
-      { name: "Tailwind CSS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
-      { name: "HeroUI", image: "https://avatars.githubusercontent.com/u/150803220?s=200&v=4" },
-      { name: "Git", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-      { name: "CI/CD", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+      {
+        name: "Tailwind CSS",
+        image:
+          "https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg",
+      },
+      {
+        name: "HeroUI",
+        image:
+          "https://raw.githubusercontent.com/heroui-inc/heroui/refs/heads/canary/apps/docs/public/favicon-96x96.png",
+      },
+      {
+        name: "Git",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      },
+      {
+        name: "CI/CD",
+        image:
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      },
     ],
   },
 ];
