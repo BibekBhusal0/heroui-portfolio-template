@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardBody, CardFooter, Button, Image, Chip } from "@heroui/react";
 import { Icon } from "@iconify/react";
@@ -31,7 +30,9 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
               </div>
               <CardBody className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-foreground-600 mb-4">{project.description}</p>
+                <p className="text-foreground-600 mb-4">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <Chip key={tag} size="sm" variant="flat" color="primary">
@@ -62,7 +63,9 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
                     rel="noopener noreferrer"
                     color="primary"
                     size="sm"
-                    startContent={<Icon icon="lucide:external-link" width={18} />}
+                    startContent={
+                      <Icon icon="lucide:external-link" width={18} />
+                    }
                   >
                     Live Demo
                   </Button>

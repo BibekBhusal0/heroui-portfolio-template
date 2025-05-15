@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardBody, Image } from "@heroui/react";
 import { SkillCategory } from "../types";
@@ -22,7 +21,9 @@ export default function SkillsSection({ data }: SkillsSectionProps) {
           >
             <Card className="h-full">
               <CardBody className="p-6">
-                <h3 className="text-xl font-semibold mb-4">{category.category}</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  {category.category}
+                </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {category.skills.map((skill) => (
                     <motion.div

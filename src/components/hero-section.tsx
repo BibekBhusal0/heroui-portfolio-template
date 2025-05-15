@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Image } from "@heroui/react";
 import { motion } from "framer-motion";
 import { HeroSection as HeroSectionType } from "../types";
@@ -17,7 +16,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
           transition={{ duration: 0.6 }}
           className="flex flex-col gap-6"
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl md:text-5xl lg:text-6xl font-bold"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -25,8 +24,8 @@ export default function HeroSection({ data }: HeroSectionProps) {
           >
             Hi, I'm <span className="text-primary">{data.name}</span>
           </motion.h1>
-          
-          <motion.h2 
+
+          <motion.h2
             className="text-2xl md:text-3xl font-medium text-foreground-700"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -34,9 +33,9 @@ export default function HeroSection({ data }: HeroSectionProps) {
           >
             {data.tagline}
           </motion.h2>
-          
+
           {data.description && (
-            <motion.p 
+            <motion.p
               className="text-lg text-foreground-600 max-w-lg"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -45,8 +44,8 @@ export default function HeroSection({ data }: HeroSectionProps) {
               {data.description}
             </motion.p>
           )}
-          
-          <motion.div 
+
+          <motion.div
             className="flex flex-wrap gap-4 mt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,7 +66,7 @@ export default function HeroSection({ data }: HeroSectionProps) {
             ))}
           </motion.div>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
