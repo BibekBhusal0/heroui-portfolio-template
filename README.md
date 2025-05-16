@@ -3,6 +3,8 @@
 A clean, customizable portfolio template built using [HeroUI](https://heroui.com), designed for developers and creatives to showcase their work.  
 Built for the HeroHack 2025 Hackathon!
 
+Live at: [https://bibekbhusal0.github.io/heroui-portfolio-template/](https://bibekbhusal0.github.io/heroui-portfolio-template/)
+
 ## ✨ Features
 
 - Built with **HeroUI** components
@@ -48,11 +50,10 @@ Clone the repo and install dependencies:
 
 ```
 
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone https://github.com/BibekBhusal0/heroui-portfolio-template
+cd heroui-portfolio-template
 npm install
 npm run dev
-
 ```
 
 ## 🖼️ Screenshots
