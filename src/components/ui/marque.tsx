@@ -52,7 +52,8 @@ export default function Marquee({
           "flex-row": !vertical,
         },
         className
-      )}>
+      )}
+    >
       {Array.from({ length: repeat }).map((_, index) => (
         <div
           key={`item-${index}`}
@@ -61,7 +62,8 @@ export default function Marquee({
             "[animation-direction:reverse]": reverse,
             "animate-marquee-horizontal flex-row": !vertical,
             "animate-marquee-vertical flex-col": vertical,
-          })}>
+          })}
+        >
           {children}
         </div>
       ))}

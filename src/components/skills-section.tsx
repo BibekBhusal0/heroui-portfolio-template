@@ -17,7 +17,8 @@ export default function SkillsSection({ data }: SkillsSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}>
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
             <Card className="h-full">
               <CardBody className="p-6">
                 <h3 className="mb-4 text-xl font-semibold">{category.category}</h3>
@@ -27,7 +28,8 @@ export default function SkillsSection({ data }: SkillsSectionProps) {
                       key={skill.name}
                       className="flex flex-col items-center gap-2"
                       whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}>
+                      transition={{ duration: 0.2 }}
+                    >
                       <div className="flex h-12 w-12 items-center justify-center">
                         <img
                           src={skill.image}

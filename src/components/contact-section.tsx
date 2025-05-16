@@ -68,7 +68,8 @@ export default function ContactSection({ data }: ContactSectionProps) {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}>
+          transition={{ duration: 0.5 }}
+        >
           <Card>
             <CardBody className="p-6">
               <h3 className="mb-6 text-xl font-semibold">Get In Touch</h3>
@@ -123,7 +124,8 @@ export default function ContactSection({ data }: ContactSectionProps) {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="rounded-full bg-content2 p-3 transition-colors hover:bg-content3"
-                          aria-label={link.label}>
+                          aria-label={link.label}
+                        >
                           <Icon
                             icon={getIconForSocial(link.icon || link.label)}
                             width={20}
@@ -143,7 +145,8 @@ export default function ContactSection({ data }: ContactSectionProps) {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}>
+          transition={{ duration: 0.5 }}
+        >
           <Card>
             <CardBody className="p-6">
               <h3 className="mb-6 text-xl font-semibold">Send a Message</h3>
@@ -205,7 +208,8 @@ export default function ContactSection({ data }: ContactSectionProps) {
                   startContent={
                     !isSubmitting && !isSubmitted && <Icon icon="lucide:send" width={18} />
                   }
-                  endContent={isSubmitted && <Icon icon="lucide:check" width={18} />}>
+                  endContent={isSubmitted && <Icon icon="lucide:check" width={18} />}
+                >
                   {isSubmitting ? "Sending..." : isSubmitted ? "Sent!" : "Send Message"}
                 </Button>
               </form>

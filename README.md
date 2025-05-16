@@ -57,7 +57,7 @@ npm run dev
 
 ## 🖼️ Screenshots
 
-![Demo screenshot ](./screenshots/demo.png) 
+![Demo screenshot ](./screenshots/demo.png)
 
 ## 🧩 Customization
 

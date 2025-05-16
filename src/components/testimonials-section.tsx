@@ -29,13 +29,15 @@ export default function TestimonialsSection({ data }: TestimonialsSectionProps) 
             className="[--duration:40s]"
             pauseOnHover
             applyMask={false}
-            reverse={rowIndex % 2 === 0}>
+            reverse={rowIndex % 2 === 0}
+          >
             <div className="flex gap-6">
               {/* Double the testimonials to create an infinite loop effect */}
               {[...row, ...row].map((testimonial, index) => (
                 <Card
                   key={`${testimonial.name}-${index}`}
-                  className="min-w-[300px] max-w-[350px] flex-shrink-0 md:min-w-[350px]">
+                  className="min-w-[300px] max-w-[350px] flex-shrink-0 md:min-w-[350px]"
+                >
                   <CardBody className="p-6">
                     <div className="flex flex-col gap-4">
                       <div className="text-primary">

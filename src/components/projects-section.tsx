@@ -18,7 +18,8 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}>
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
             <Card className="h-full">
               <div className="relative h-48 overflow-hidden rounded-t-lg">
                 <Image
@@ -47,7 +48,8 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
                     rel="noopener noreferrer"
                     variant="flat"
                     size="sm"
-                    startContent={<Icon icon="lucide:github" width={18} />}>
+                    startContent={<Icon icon="lucide:github" width={18} />}
+                  >
                     Code
                   </Button>
                 )}
@@ -59,7 +61,8 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
                     rel="noopener noreferrer"
                     color="primary"
                     size="sm"
-                    startContent={<Icon icon="lucide:external-link" width={18} />}>
+                    startContent={<Icon icon="lucide:external-link" width={18} />}
+                  >
                     Live Demo
                   </Button>
                 )}
