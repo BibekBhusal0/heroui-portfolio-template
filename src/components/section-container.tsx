@@ -19,19 +19,17 @@ export default function SectionContainer({
     <div
       id={id}
       className={cn(
-        "min-h-screen w-full py-20 px-4 md:px-8 flex flex-col justify-center",
-        className,
-      )}
-    >
+        "flex min-h-screen w-full flex-col justify-center px-4 py-20 md:px-8",
+        className
+      )}>
       <div className="mx-auto w-full">
         {title && (
           <motion.h2
-            className="text-3xl md:text-4xl font-bold mb-12 text-center"
+            className="mb-12 text-center text-3xl font-bold md:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
+            transition={{ duration: 0.5 }}>
             {title}
           </motion.h2>
         )}

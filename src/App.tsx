@@ -81,9 +81,7 @@ const sectionsConfig: SectionConfig<any>[] = [
 ];
 
 function App() {
-  const { activeSection, sectionRefs } = useActiveSection(
-    sectionsConfig.map((s) => s.id),
-  );
+  const { activeSection, sectionRefs } = useActiveSection(sectionsConfig.map((s) => s.id));
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -98,8 +96,7 @@ function App() {
         className="fixed bottom-8 left-1/2 z-50"
         initial={{ y: 100, opacity: 0, x: "-50%" }}
         animate={{ y: 0, opacity: 1, x: "-50%" }}
-        transition={{ delay: 0.5, duration: 0.5 }}
-      >
+        transition={{ delay: 0.5, duration: 0.5 }}>
         <Tabs
           aria-label="Navigation"
           selectedKey={activeSection}
@@ -107,18 +104,13 @@ function App() {
           radius="full"
           classNames={{
             base: "min-w-[300px] sm:min-w-[500px]",
-          }}
-        >
+          }}>
           {sectionsConfig.map((section) => (
             <Tab
               key={section.id}
               title={
                 <div className="flex items-center gap-2">
-                  <Icon
-                    icon={section.icon}
-                    width={18}
-                    className="sm:hidden md:block"
-                  />
+                  <Icon icon={section.icon} width={18} className="sm:hidden md:block" />
                   <span className="hidden sm:block">{section.label}</span>
                 </div>
               }
@@ -134,8 +126,7 @@ function App() {
             <section
               id={section.id}
               key={section.id}
-              ref={(el) => (sectionRefs.current[section.id] = el)}
-            >
+              ref={(el) => (sectionRefs.current[section.id] = el)}>
               <SectionComponent data={section.data} />
             </section>
           );

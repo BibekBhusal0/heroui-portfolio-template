@@ -10,36 +10,32 @@ interface SkillsSectionProps {
 export default function SkillsSection({ data }: SkillsSectionProps) {
   return (
     <SectionContainer title="Skills">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {data.map((category, index) => (
           <motion.div
             key={category.category}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
+            transition={{ duration: 0.5, delay: index * 0.1 }}>
             <Card className="h-full">
               <CardBody className="p-6">
-                <h3 className="text-xl font-semibold mb-4">
-                  {category.category}
-                </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <h3 className="mb-4 text-xl font-semibold">{category.category}</h3>
+                <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
                   {category.skills.map((skill) => (
                     <motion.div
                       key={skill.name}
                       className="flex flex-col items-center gap-2"
                       whileHover={{ scale: 1.05 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <div className="w-12 h-12 flex items-center justify-center">
+                      transition={{ duration: 0.2 }}>
+                      <div className="flex h-12 w-12 items-center justify-center">
                         <img
                           src={skill.image}
                           alt={skill.name}
-                          className="max-w-full max-h-full object-contain"
+                          className="max-h-full max-w-full object-contain"
                         />
                       </div>
-                      <span className="text-sm text-center">{skill.name}</span>
+                      <span className="text-center text-sm">{skill.name}</span>
                     </motion.div>
                   ))}
                 </div>

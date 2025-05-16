@@ -21,9 +21,7 @@ export default function ContactSection({ data }: ContactSectionProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [isSubmitted, setIsSubmitted] = React.useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
   };
@@ -65,32 +63,24 @@ export default function ContactSection({ data }: ContactSectionProps) {
 
   return (
     <SectionContainer title="Contact Me">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+          transition={{ duration: 0.5 }}>
           <Card>
             <CardBody className="p-6">
-              <h3 className="text-xl font-semibold mb-6">Get In Touch</h3>
+              <h3 className="mb-6 text-xl font-semibold">Get In Touch</h3>
 
               <div className="flex flex-col gap-6">
                 <div className="flex items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Icon
-                      icon="lucide:mail"
-                      className="text-primary"
-                      width={24}
-                    />
+                  <div className="rounded-full bg-primary/10 p-3">
+                    <Icon icon="lucide:mail" className="text-primary" width={24} />
                   </div>
                   <div>
                     <p className="text-sm text-foreground-500">Email</p>
-                    <a
-                      href={`mailto:${data.email}`}
-                      className="font-medium hover:text-primary"
-                    >
+                    <a href={`mailto:${data.email}`} className="font-medium hover:text-primary">
                       {data.email}
                     </a>
                   </div>
@@ -98,19 +88,12 @@ export default function ContactSection({ data }: ContactSectionProps) {
 
                 {data.phone && (
                   <div className="flex items-center gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
-                      <Icon
-                        icon="lucide:phone"
-                        className="text-primary"
-                        width={24}
-                      />
+                    <div className="rounded-full bg-primary/10 p-3">
+                      <Icon icon="lucide:phone" className="text-primary" width={24} />
                     </div>
                     <div>
                       <p className="text-sm text-foreground-500">Phone</p>
-                      <a
-                        href={`tel:${data.phone}`}
-                        className="font-medium hover:text-primary"
-                      >
+                      <a href={`tel:${data.phone}`} className="font-medium hover:text-primary">
                         {data.phone}
                       </a>
                     </div>
@@ -119,12 +102,8 @@ export default function ContactSection({ data }: ContactSectionProps) {
 
                 {data.location && (
                   <div className="flex items-center gap-4">
-                    <div className="bg-primary/10 p-3 rounded-full">
-                      <Icon
-                        icon="lucide:map-pin"
-                        className="text-primary"
-                        width={24}
-                      />
+                    <div className="rounded-full bg-primary/10 p-3">
+                      <Icon icon="lucide:map-pin" className="text-primary" width={24} />
                     </div>
                     <div>
                       <p className="text-sm text-foreground-500">Location</p>
@@ -135,9 +114,7 @@ export default function ContactSection({ data }: ContactSectionProps) {
 
                 {data.socialLinks && data.socialLinks.length > 0 && (
                   <div className="mt-4">
-                    <p className="text-sm text-foreground-500 mb-3">
-                      Connect with me
-                    </p>
+                    <p className="mb-3 text-sm text-foreground-500">Connect with me</p>
                     <div className="flex gap-3">
                       {data.socialLinks.map((link) => (
                         <a
@@ -145,9 +122,8 @@ export default function ContactSection({ data }: ContactSectionProps) {
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="bg-content2 hover:bg-content3 transition-colors p-3 rounded-full"
-                          aria-label={link.label}
-                        >
+                          className="rounded-full bg-content2 p-3 transition-colors hover:bg-content3"
+                          aria-label={link.label}>
                           <Icon
                             icon={getIconForSocial(link.icon || link.label)}
                             width={20}
@@ -167,14 +143,13 @@ export default function ContactSection({ data }: ContactSectionProps) {
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
+          transition={{ duration: 0.5 }}>
           <Card>
             <CardBody className="p-6">
-              <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
+              <h3 className="mb-6 text-xl font-semibold">Send a Message</h3>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                   <Input
                     label="Name"
                     name="name"
@@ -228,18 +203,10 @@ export default function ContactSection({ data }: ContactSectionProps) {
                   isLoading={isSubmitting}
                   isDisabled={isSubmitting || isSubmitted}
                   startContent={
-                    !isSubmitting &&
-                    !isSubmitted && <Icon icon="lucide:send" width={18} />
+                    !isSubmitting && !isSubmitted && <Icon icon="lucide:send" width={18} />
                   }
-                  endContent={
-                    isSubmitted && <Icon icon="lucide:check" width={18} />
-                  }
-                >
-                  {isSubmitting
-                    ? "Sending..."
-                    : isSubmitted
-                      ? "Sent!"
-                      : "Send Message"}
+                  endContent={isSubmitted && <Icon icon="lucide:check" width={18} />}>
+                  {isSubmitting ? "Sending..." : isSubmitted ? "Sent!" : "Send Message"}
                 </Button>
               </form>
             </CardBody>

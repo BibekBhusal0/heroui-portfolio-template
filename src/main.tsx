@@ -5,11 +5,11 @@ import App from "./App.tsx";
 import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-	<React.StrictMode>
-		<HeroUIProvider>
-			<main className="text-foreground bg-background">
-				<App />
-			</main>
-		</HeroUIProvider>
-	</React.StrictMode>
+  <React.StrictMode>
+    <HeroUIProvider>
+      <main className="bg-background text-foreground">
+        <App />
+      </main>
+    </HeroUIProvider>
+  </React.StrictMode>
 );

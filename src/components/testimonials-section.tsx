@@ -9,9 +9,7 @@ interface TestimonialsSectionProps {
   data: Testimonial[];
 }
 
-export default function TestimonialsSection({
-  data,
-}: TestimonialsSectionProps) {
+export default function TestimonialsSection({ data }: TestimonialsSectionProps) {
   // Split testimonials into rows if there are more than 3
   const rows = React.useMemo(() => {
     if (data.length <= 3) {
@@ -31,15 +29,13 @@ export default function TestimonialsSection({
             className="[--duration:40s]"
             pauseOnHover
             applyMask={false}
-            reverse={rowIndex % 2 === 0}
-          >
+            reverse={rowIndex % 2 === 0}>
             <div className="flex gap-6">
               {/* Double the testimonials to create an infinite loop effect */}
               {[...row, ...row].map((testimonial, index) => (
                 <Card
                   key={`${testimonial.name}-${index}`}
-                  className="min-w-[300px] md:min-w-[350px] max-w-[350px] flex-shrink-0"
-                >
+                  className="min-w-[300px] max-w-[350px] flex-shrink-0 md:min-w-[350px]">
                   <CardBody className="p-6">
                     <div className="flex flex-col gap-4">
                       <div className="text-primary">
@@ -48,18 +44,12 @@ export default function TestimonialsSection({
 
                       <p className="text-foreground-700">{testimonial.text}</p>
 
-                      <div className="flex items-center gap-3 mt-2">
-                        <Avatar
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          size="md"
-                        />
+                      <div className="mt-2 flex items-center gap-3">
+                        <Avatar src={testimonial.image} alt={testimonial.name} size="md" />
                         <div>
                           <h4 className="font-medium">{testimonial.name}</h4>
                           {testimonial.title && (
-                            <p className="text-sm text-foreground-500">
-                              {testimonial.title}
-                            </p>
+                            <p className="text-sm text-foreground-500">{testimonial.title}</p>
                           )}
                         </div>
                       </div>

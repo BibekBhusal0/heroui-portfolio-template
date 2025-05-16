@@ -51,9 +51,8 @@ export default function Marquee({
           "flex-col": vertical,
           "flex-row": !vertical,
         },
-        className,
-      )}
-    >
+        className
+      )}>
       {Array.from({ length: repeat }).map((_, index) => (
         <div
           key={`item-${index}`}
@@ -62,8 +61,7 @@ export default function Marquee({
             "[animation-direction:reverse]": reverse,
             "animate-marquee-horizontal flex-row": !vertical,
             "animate-marquee-vertical flex-col": vertical,
-          })}
-        >
+          })}>
           {children}
         </div>
       ))}
@@ -74,11 +72,10 @@ export default function Marquee({
             {
               "bg-gradient-to-b": vertical,
               "bg-gradient-to-r": !vertical,
-            },
+            }
           )}
         />
       )}
     </div>
   );
 }
-

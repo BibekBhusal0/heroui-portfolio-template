@@ -10,7 +10,7 @@ export interface HeroSection {
 }
 
 export interface AboutSectation {
-   text: string;
+  text: string;
 }
 
 export interface Project {

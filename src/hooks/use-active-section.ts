@@ -14,10 +14,7 @@ export function useActiveSection(sectionIds: string[]) {
         const sectionHeight = (section as HTMLElement).offsetHeight;
         const sectionId = section.getAttribute("id") || "";
 
-        if (
-          scrollPosition >= sectionTop &&
-          scrollPosition < sectionTop + sectionHeight
-        ) {
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setActiveSection(sectionId);
         }
       });

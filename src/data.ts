@@ -37,8 +37,7 @@ export const projects: Project[] = [
   },
   {
     title: "Dashboard X",
-    description:
-      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+    description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
     image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=project2",
     tags: ["Vue", "D3", "Admin"],
     links: {
@@ -48,8 +47,7 @@ export const projects: Project[] = [
   },
   {
     title: "E-commerce UI Kit",
-    description:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
+    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
     image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=project3",
     tags: ["Next.js", "Shop", "Stripe"],
     links: {
@@ -59,8 +57,7 @@ export const projects: Project[] = [
   },
   {
     title: "Daily planner",
-    description:
-      "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
+    description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit.",
     image: "https://img.heroui.chat/image/dashboard?w=600&h=400&u=project4",
     tags: ["HeroUI", "Notion", "Stripe"],
     links: {
@@ -138,8 +135,7 @@ export const timeline: TimelineItem[] = [
     location: "Online",
     startDate: "2018",
     endDate: "2021",
-    description:
-      "Aliquam erat volutpat. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
+    description: "Aliquam erat volutpat. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.",
   },
 ];
 
@@ -159,18 +155,15 @@ export const skills: SkillCategory[] = [
       },
       {
         name: "React",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
       {
         name: "Next.js",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       },
       {
         name: "Vue",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
       },
     ],
   },
@@ -179,18 +172,15 @@ export const skills: SkillCategory[] = [
     skills: [
       {
         name: "Figma",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
       },
       {
         name: "Sketch",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/59/Sketch_Logo.svg",
       },
       {
         name: "Adobe XD",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
       },
     ],
   },
@@ -199,8 +189,7 @@ export const skills: SkillCategory[] = [
     skills: [
       {
         name: "Tailwind CSS",
-        image:
-          "https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg",
+        image: "https://tailwindcss.com/_next/static/media/tailwindcss-mark.d52e9897.svg",
       },
       {
         name: "HeroUI",
@@ -209,13 +198,11 @@ export const skills: SkillCategory[] = [
       },
       {
         name: "Git",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
       },
       {
         name: "CI/CD",
-        image:
-          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
     ],
   },

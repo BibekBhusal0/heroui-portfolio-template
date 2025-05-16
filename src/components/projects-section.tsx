@@ -11,29 +11,26 @@ interface ProjectsSectionProps {
 export default function ProjectsSection({ data }: ProjectsSectionProps) {
   return (
     <SectionContainer title="Projects">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {data.map((project, index) => (
           <motion.div
             key={project.title}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
+            transition={{ duration: 0.5, delay: index * 0.1 }}>
             <Card className="h-full">
               <div className="relative h-48 overflow-hidden rounded-t-lg">
                 <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <CardBody className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-foreground-600 mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <h3 className="mb-2 text-xl font-semibold">{project.title}</h3>
+                <p className="mb-4 text-foreground-600">{project.description}</p>
+                <div className="mb-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <Chip key={tag} size="sm" variant="flat" color="primary">
                       {tag}
@@ -41,7 +38,7 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
                   ))}
                 </div>
               </CardBody>
-              <CardFooter className="flex gap-3 justify-end">
+              <CardFooter className="flex justify-end gap-3">
                 {project.links.github && (
                   <Button
                     as="a"
@@ -50,8 +47,7 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
                     rel="noopener noreferrer"
                     variant="flat"
                     size="sm"
-                    startContent={<Icon icon="lucide:github" width={18} />}
-                  >
+                    startContent={<Icon icon="lucide:github" width={18} />}>
                     Code
                   </Button>
                 )}
@@ -63,10 +59,7 @@ export default function ProjectsSection({ data }: ProjectsSectionProps) {
                     rel="noopener noreferrer"
                     color="primary"
                     size="sm"
-                    startContent={
-                      <Icon icon="lucide:external-link" width={18} />
-                    }
-                  >
+                    startContent={<Icon icon="lucide:external-link" width={18} />}>
                     Live Demo
                   </Button>
                 )}

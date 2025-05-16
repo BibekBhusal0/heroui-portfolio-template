@@ -11,41 +11,36 @@ interface TimelineSectionProps {
 export default function TimelineSection({ data }: TimelineSectionProps) {
   return (
     <SectionContainer title="Timeline">
-      <div className="relative max-w-5xl mx-auto">
+      <div className="relative mx-auto max-w-5xl">
         {/* Timeline line */}
-        <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-default-300" />
+        <div className="absolute bottom-0 left-4 top-0 w-0.5 transform bg-default-300 md:left-1/2 md:-translate-x-1/2" />
 
         {data.map((item, index) => (
           <motion.div
             key={index}
             className={cn(
               "relative mb-12",
-              index % 2 === 0
-                ? "md:pr-8 md:text-right md:ml-auto md:mr-1/2"
-                : "md:pl-8 md:ml-1/2",
-              "md:w-1/2",
+              index % 2 === 0 ? "md:mr-1/2 md:ml-auto md:pr-8 md:text-right" : "md:ml-1/2 md:pl-8",
+              "md:w-1/2"
             )}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
+            transition={{ duration: 0.5, delay: index * 0.1 }}>
             <div
               key={`circle-${index}`}
               className={cn(
-                "absolute w-3 h-3 rounded-full bg-primary-500 transform mt-2",
-                index % 2 === 0 ? "" : "md:right-0",
+                "absolute mt-2 h-3 w-3 transform rounded-full bg-primary-500",
+                index % 2 === 0 ? "" : "md:right-0"
               )}
             />
             <Card className="m-2">
               <CardBody className="p-6">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
-                  {item.subtitle && (
-                    <p className="text-foreground-600">{item.subtitle}</p>
-                  )}
+                  {item.subtitle && <p className="text-foreground-600">{item.subtitle}</p>}
 
-                  <div className="flex items-center gap-2 text-sm text-foreground-500 mt-1">
+                  <div className="mt-1 flex items-center gap-2 text-sm text-foreground-500">
                     {item.location && (
                       <div className="flex items-center gap-1">
                         <Icon icon="lucide:map-pin" width={14} />
@@ -62,9 +57,7 @@ export default function TimelineSection({ data }: TimelineSectionProps) {
                   </div>
 
                   {item.description && (
-                    <p className="mt-3 text-foreground-700">
-                      {item.description}
-                    </p>
+                    <p className="mt-3 text-foreground-700">{item.description}</p>
                   )}
                 </div>
               </CardBody>
