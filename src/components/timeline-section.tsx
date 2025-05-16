@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Card, CardBody } from "@heroui/react";
+import { Card, CardBody, cn } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { TimelineItem } from "../types";
 import SectionContainer from "./section-container";
@@ -11,23 +11,33 @@ interface TimelineSectionProps {
 export default function TimelineSection({ data }: TimelineSectionProps) {
   return (
     <SectionContainer title="Timeline">
-      <div className="relative max-w-3xl mx-auto">
+      <div className="relative max-w-5xl mx-auto">
         {/* Timeline line */}
-        <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-default-200"></div>
+        <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-default-300" />
 
         {data.map((item, index) => (
           <motion.div
             key={index}
-            className={`relative mb-12 ${index % 2 === 0
+            className={cn(
+              "relative mb-12",
+              index % 2 === 0
                 ? "md:pr-8 md:text-right md:ml-auto md:mr-1/2"
-                : "md:pl-8 md:ml-1/2"
-              } md:w-1/2`}
+                : "md:pl-8 md:ml-1/2",
+              "md:w-1/2",
+            )}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="ml-10 md:ml-0 md:mr-0">
+            <div
+              key={`circle-${index}`}
+              className={cn(
+                "absolute w-3 h-3 rounded-full bg-primary-500 transform mt-2",
+                index % 2 === 0 ? "" : "md:right-0",
+              )}
+            />
+            <Card className="m-2">
               <CardBody className="p-6">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-xl font-semibold">{item.title}</h3>
