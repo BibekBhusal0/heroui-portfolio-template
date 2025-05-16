@@ -57,9 +57,7 @@ npm run dev
 
 ## 🖼️ Screenshots
 
-> Add screenshots below
-
-<!-- > ![Homepage](screenshot-link) > ![Projects Section](screenshot-link) -->
+![Demo screenshot ](./screenshots/demo.png) 
 
 ## 🧩 Customization
 
