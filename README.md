@@ -60,9 +60,7 @@ npm run dev
 
 ![Demo screenshot ](./screenshots/demo.png)
 
-
 https://github.com/user-attachments/assets/4ba624fb-cbb3-42b2-9e0a-9799c8e0c2b4
-
 
 ## 🧩 Customization
 
